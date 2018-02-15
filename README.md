@@ -30,7 +30,7 @@ https://www.cvedetails.com/version/127611/Canonical-Ubuntu-Linux-12.04.html
 Ubuntu LTS 12 is officially on End of Life notice except Ubuntu Advantage Customers who are only Entitled to  Extended security maintenance.
 https://www.ubuntu.com/info/release-end-of-life.
 
-The httpd service was started by manually and will not be available after a reboot or when an alternate init state is transitioned into.
+The httpd service was started manually and will not be available after a reboot or when an alternate init state is transitioned into.
 
 The apache instance was running as root from /opt/apache.  That instance is deprecated and the new instance is being used.  A repository can be created within the campus network to avoid unnecessary traffic to pull the install binaries for apache2.
 
