@@ -15,7 +15,7 @@ Apache2 has been set start from boot up.
 ## Upgrades and future enhancements
 
 Apache
-Apache2/utils 2.2.22 stable version is being used and the version is locked in the ( ) to avoid accidental upgrades.  Should the need for an upgrade be necessary, the version number can be changed.  
+Apache2/utils 2.2.22 stable version is being used and the version is locked under `tasks/leodis.yml "apache2-utils=2.2.22-1ubuntu1.11" & "apache2=2.2.22-1ubuntu1.11" to avoid accidental upgrades.  Should the need for an upgrade be necessary, the version number can be changed.  
 
 Vhosts
 The desired vhost configuration file can be created and added to the templates/etc/apache2 with the j2 extension. Then the 
@@ -41,6 +41,7 @@ All files in the /opt/directory had the wrong permissions allowing any user acce
   2. Couldn't find 2 responsive nameservers. 
   3. Root can directly login via SSH.
   4. Found SSL certificate expiration (/etc/ssl/certs/ca-certificates.crt).
+  5. No immediate perimeter protection is available - Iptables is NOT running.
 
 # Important Security / Vulnerability Issues
 
