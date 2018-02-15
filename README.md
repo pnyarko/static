@@ -21,7 +21,7 @@ Vhosts
 The desired vhost configuration file can be created and added to the templates/etc/apache2 with the j2 extension. Then the 
 
 Modules
-Additional modules can be enabled by editing ( ) and adding the names of the desired modules.
+Additional modules can be enabled by editing `/leodis-apache2/tasks/leodis.yml` and adding the names of the desired modules to the modules list.
 
 ## Analysis 
 There are a currently 104 security vulnerabilities in for Ubuntu LTS 12
@@ -39,9 +39,9 @@ All files in the /opt/directory had the wrong permissions allowing any user acce
 
   1. No password set on GRUB bootloader.
   2. Couldn't find 2 responsive nameservers. 
-  3. Root can directly login via SSH.
+  3. Root can directly login via SSH. (Remedied)
   4. Found SSL certificate expiration (/etc/ssl/certs/ca-certificates.crt).
-  5. No immediate perimeter protection is available - Iptables is NOT running.
+  5. No immediate perimeter protection is available - UFW is NOT running. (Remedied)
 
 # Important Security / Vulnerability Issues
 
