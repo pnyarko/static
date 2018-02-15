@@ -62,4 +62,5 @@ All files in the /opt/directory had the wrong permissions allowing any user acce
    16. Renew SSL expired certificates. 
    17. Harden the system by removing unneeded compilers. This can decrease the chance of customized trojans, backdoors and rootkits to be compiled and installed.
    18. Harden the system by installing one or malware scanners to perform periodic file system scans.
-
+# Conclusion
+The current solution presented solves an intermediate issue and allows the application to conform to basic application and security standards however overall the system requires hardening urgently as it risks becoming a backdoor for potential maliciously intended users.
