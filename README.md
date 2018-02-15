@@ -43,7 +43,7 @@ All files in the /opt/directory had the wrong permissions allowing any user acce
   4. Found SSL certificate expiration (/etc/ssl/certs/ca-certificates.crt).
   5. No immediate perimeter protection is available - UFW is NOT running. (Remedied)
 
-# Important Security / Vulnerability Issues
+## Important Security / Vulnerability Issues
 
    1. Update to the latest stable release.
    2. Configure password aging limits to enforce password changing on a regular basis.
@@ -63,5 +63,5 @@ All files in the /opt/directory had the wrong permissions allowing any user acce
    16. Renew SSL expired certificates. 
    17. Harden the system by removing unneeded compilers. This can decrease the chance of customized trojans, backdoors and rootkits to be compiled and installed.
    18. Harden the system by installing one or malware scanners to perform periodic file system scans.
-# Conclusion
+## Conclusion
 The current solution presented solves an intermediate issue and allows the application to conform to basic application and security standards however overall the system requires hardening urgently as it risks becoming a backdoor for potential maliciously intended users.
