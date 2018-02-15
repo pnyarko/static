@@ -23,7 +23,7 @@ The desired vhost configuration file can be created and added to the templates/e
 Modules
 Additional modules can be enabled by editing ( ) and adding the names of the desired modules.
 
-# Security and Issues
+## Security and Issues
 There are a currently 104 security vulnerabilities in for Ubuntu LTS 12
 https://www.cvedetails.com/version/127611/Canonical-Ubuntu-Linux-12.04.html
 Ubuntu LTS 12 is officially on End of Life notice except Ubuntu Advantage Customers who are only Entitled to  Extended security maintenance.
@@ -33,33 +33,32 @@ The httpd service was started by hand and will not be available after a reboot o
 
 Firstly the apache instance was running as root from /opt/apache.  That instance is deprecated and the new instance is being used.  A repository can be created within the campus network to avoid unnecessary traffic to pull the install binaries for apache2.
 
-# Critical Security Issues
+## Critical Security Issues
 All files in the /opt/directory had the wrong permissions allowing any user access to modify and run executables from that location.
 
-   No password set on GRUB bootloader.
-   Couldn't find 2 responsive nameservers. 
-   Root can directly login via SSH.
-   Found SSL certificate expiration (/etc/ssl/certs/ca-certificates.crt).
+  1. No password set on GRUB bootloader.
+  2. Couldn't find 2 responsive nameservers. 
+  3. Root can directly login via SSH.
+  4. Found SSL certificate expiration (/etc/ssl/certs/ca-certificates.crt).
 
-  #Important Security / Vulnerability Issues
+# Important Security / Vulnerability Issues
 
-   Update to the latest stable release.
-   Run grub-md5-crypt and create a hashed password. After that, add a line below the line saying timeout=<value>: password --md5 <password hash> 
-   Configure password aging limits to enforce password changing on a regular basis.
-   Default umask in /etc/profile could be more strict like 027. 
-   Default umask in /etc/login.defs could be more strict like 027. 
-   Default umask in /etc/init.d/rc could be more strict like 027. 
-   To decrease the impact of a full /home file system, place /home on a separated partition
-   To decrease the impact of a full /tmp file system, place /tmp on a separated partition 
-   Disable drivers like USB storage when not used, to prevent unauthorized storage or data theft 
-   Disable drivers like firewire storage when not used, to prevent unauthorized storage or data theft 
-   Install package apt-show-versions for patch management purposes 
-   Check your resolv.conf file and fill in a backup nameserver if possible 
-   Configure a firewall/packet filter to filter incoming and outgoing traffic 
-   Add legal banner to /etc/issue, to warn unauthorized users. 
-   Add legal banner to /etc/issue.net, to warn unauthorized users.
-   Enable auditd to collect audit information. 
-   Renew SSL expired certificates. 
-   Harden the system by removing unneeded compilers. This can decrease the chance of customized trojans, backdoors and rootkits to be compiled and installed.
-   Harden the system by installing one or malware scanners to perform periodic file system scans.
+   1. Update to the latest stable release.
+   2. Configure password aging limits to enforce password changing on a regular basis.
+   3. Default umask in /etc/profile could be more strict like 027. 
+   4. Default umask in /etc/login.defs could be more strict like 027. 
+   5. Default umask in /etc/init.d/rc could be more strict like 027. 
+   6. To decrease the impact of a full /home file system, place /home on a separated partition
+   7. To decrease the impact of a full /tmp file system, place /tmp on a separated partition 
+   8. Disable drivers like USB storage when not used, to prevent unauthorized storage or data theft 
+   9. Disable drivers like firewire storage when not used, to prevent unauthorized storage or data theft 
+   10. Install package apt-show-versions for patch management purposes 
+   11. Check your resolv.conf file and fill in a backup nameserver if possible 
+   12. Configure a firewall/packet filter to filter incoming and outgoing traffic 
+   13. Add legal banner to /etc/issue, to warn unauthorized users. 
+   14. Add legal banner to /etc/issue.net, to warn unauthorized users.
+   15. Enable auditd to collect audit information. 
+   16. Renew SSL expired certificates. 
+   17. Harden the system by removing unneeded compilers. This can decrease the chance of customized trojans, backdoors and rootkits to be compiled and installed.
+   18. Harden the system by installing one or malware scanners to perform periodic file system scans.
 
