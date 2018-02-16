@@ -5,12 +5,13 @@
 2. The user on the server has generated public/private key and has added the public key to authorized_keys file using ssh-copy-id on the target servers in the inventory list.
 
 ## Invocation
-`ansible-playbook -i {inventory} leodis-apache2/playbook.yml`
+First copy the playbook.yml from the leodis-apache2 directory and invoke `ansible-playbook playbook.yml -i {inventory}`
 Assuming there's an inventory file with the target servers.  This is an idempotent script and can be run as many times as necessary. Should you encounter issue with apt please manually run  'apt-get update'.
 
 Startup
 Apache2 has been set start from boot up.
 
+All /opt/apache directory files can now be safely archived.
 
 ## Upgrades and future enhancements
 
