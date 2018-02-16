@@ -18,14 +18,14 @@ All /opt/apache directory files can now be safely archived.
 Apache
 Apache2/utils 2.2.22 stable version is being used and the version is locked under `tasks/leodis.yml "apache2-utils=2.2.22-1ubuntu1.11" & "apache2=2.2.22-1ubuntu1.11" to avoid accidental upgrades.  Should the need for an upgrade be necessary, the version number can be changed.  
 
-Vhosts
-The desired vhost configuration file can be created and added to the templates/etc/apache2 with the j2 extension. Then the 
+Vhosts:
+The desired vhost configuration file can be created and added to the templates/etc/apache2 with the j2 extension. 
 
-Modules
+Modules:
 Additional modules can be enabled by editing `/leodis-apache2/tasks/leodis.yml` and adding the names of the desired modules to the modules list.
 
 ## Analysis 
-There are a currently 104 security vulnerabilities in for Ubuntu LTS 12
+There are currently 104 security vulnerabilities in for Ubuntu LTS 12
 https://www.cvedetails.com/version/127611/Canonical-Ubuntu-Linux-12.04.html
 
 Ubuntu LTS 12 is officially on End of Life notice except Ubuntu Advantage Customers who are only Entitled to  Extended security maintenance.
@@ -33,7 +33,7 @@ https://www.ubuntu.com/info/release-end-of-life.
 
 The httpd service was started manually and will not be available after a reboot or when an alternate init state is transitioned into.
 
-The apache instance was running as root from /opt/apache.  That instance is deprecated and the new instance is being used.  A repository can be created within the campus network to avoid unnecessary traffic to pull the install binaries for apache2.
+The apache instance was running as root from /opt/apache.  That instance is deprecated and the new instance is being used.  It is recommended that alocal repository is created within the campus network to avoid unnecessary traffic to pull the install binaries for apache2.
 
 ## Critical Security & System Issues
 All files in the /opt/directory had the wrong permissions allowing any user access to modify and run executables from that location.
@@ -43,7 +43,7 @@ All files in the /opt/directory had the wrong permissions allowing any user acce
   3. Root can directly login via SSH. (Remedied)
   4. Found SSL certificate expiration (/etc/ssl/certs/ca-certificates.crt).
   5. No immediate perimeter protection is available - UFW is NOT running. (Remedied)
-  6. Ansible version 1.9.4 s deprecated and requires and upgrade to 2.x.
+  6. Ansible version 1.9.4 s deprecated and requires and upgrading to 2.x.
 
 ## Important Security / Vulnerability Issues
 
@@ -52,18 +52,17 @@ All files in the /opt/directory had the wrong permissions allowing any user acce
    3. Default umask in /etc/profile could be more strict like 027. 
    4. Default umask in /etc/login.defs could be more strict like 027. 
    5. Default umask in /etc/init.d/rc could be more strict like 027. 
-   6. To decrease the impact of a full /home file system, place /home on a separated partition
-   7. To decrease the impact of a full /tmp file system, place /tmp on a separated partition 
-   8. Disable drivers like USB storage when not used, to prevent unauthorized storage or data theft 
-   9. Disable drivers like firewire storage when not used, to prevent unauthorized storage or data theft 
-   10. Install package apt-show-versions for patch management purposes 
-   11. Check your resolv.conf file and fill in a backup nameserver if possible 
-   12. Configure a firewall/packet filter to filter incoming and outgoing traffic 
-   13. Add legal banner to /etc/issue, to warn unauthorized users. 
-   14. Add legal banner to /etc/issue.net, to warn unauthorized users.
-   15. Enable auditd to collect audit information. 
-   16. Renew SSL expired certificates. 
+   6. To decrease the impact of a full /home file system, place /home on a separated partition.
+   7. To decrease the impact of a full /tmp file system, place /tmp on a separated partition .
+   8. Disable drivers like USB storage when not used, to prevent unauthorized storage or data theft.
+   9. Disable drivers like firewire storage when not used, to prevent unauthorized storage or data theft.
+   10. Install package apt-show-versions for patch management purposes.
+   11. Check your resolv.conf file and fill in a backup nameserver if possible.
+   12. Add legal banner to /etc/issue, to warn unauthorized users. 
+   13. Add legal banner to /etc/issue.net, to warn unauthorized users.
+   14. Enable auditd to collect audit information. 
+   15. Renew SSL expired certificates. 
    17. Harden the system by removing unneeded compilers. This can decrease the chance of customized trojans, backdoors and rootkits to be compiled and installed.
    18. Harden the system by installing one or malware scanners to perform periodic file system scans.
 ## Conclusion
-The current solution presented solves an intermediate issue and allows the application to conform to basic application and security standards however overall the system requires hardening urgently as it risks becoming a backdoor for potential maliciously intended users.
+The current solution presented solves an intermediate issue and allows the application to conform to basic application and security standards however overall the system requires additional hardening urgently as it risks becoming a backdoor for malicious activities..
