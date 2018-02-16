@@ -15,13 +15,13 @@ All /opt/apache directory files can now be safely archived.
 
 ## Upgrades and future enhancements
 
-Apache
+APACHE:
 Apache2/utils 2.2.22 stable version is being used and the version is locked under `tasks/leodis.yml "apache2-utils=2.2.22-1ubuntu1.11" & "apache2=2.2.22-1ubuntu1.11" to avoid accidental upgrades.  Should the need for an upgrade be necessary, the version number can be changed.  
 
-Vhosts:
+VHOSTS:
 The desired vhost configuration file can be created and added to the templates/etc/apache2 with the j2 extension. 
 
-Modules:
+MODULES:
 Additional modules can be enabled by editing `/leodis-apache2/tasks/leodis.yml` and adding the names of the desired modules to the modules list.
 
 ## Analysis 
