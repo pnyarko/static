@@ -2,7 +2,7 @@
 
 ## Assumptions
 1. The user running the playbook has the correct sudo rights.
-2. The user on the server has generated public/private key and has added the public key to authorized_keys file using ssh-copy-id on the target servers in the inventory list.
+2. The user on the server has generated public/private key and has added the public key to authorized_keys file using ssh-copy-id on the target servers in the inventory list in order for ansible to run locally.
 
 ## Invocation
 First copy the playbook.yml from the leodis-apache2 directory and invoke `ansible-playbook playbook.yml -i {inventory}`
