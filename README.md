@@ -34,7 +34,7 @@ The httpd service was started manually and will not be available after a reboot 
 
 The apache instance was running as root from /opt/apache.  That instance is deprecated and the new instance is being used.  A repository can be created within the campus network to avoid unnecessary traffic to pull the install binaries for apache2.
 
-## Critical Security Issues
+## Critical Security & System Issues
 All files in the /opt/directory had the wrong permissions allowing any user access to modify and run executables from that location.
 
   1. No password set on GRUB bootloader.
@@ -42,6 +42,7 @@ All files in the /opt/directory had the wrong permissions allowing any user acce
   3. Root can directly login via SSH. (Remedied)
   4. Found SSL certificate expiration (/etc/ssl/certs/ca-certificates.crt).
   5. No immediate perimeter protection is available - UFW is NOT running. (Remedied)
+  6. Ansible version 1.9.4 s deprecated and requires and upgrade to 2.x.
 
 ## Important Security / Vulnerability Issues
 
